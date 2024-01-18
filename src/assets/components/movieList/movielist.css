@@ -1,0 +1,17 @@
+.movieList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.movieCard{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: darkslategray;
+    border-radius: 20px;
+    height: 550px;
+    padding: 25px;
+}
