@@ -58,9 +58,9 @@ const MovieList = ({movies}) => {
 
 
     const showGenre = (event) =>{
-        setMovies(movie)
-        let ourDataCopy = [...movie]
-        let sortMovieArry = ourDataCopy.filter(movie => movie.genre.includes(event.target.value))
+        
+
+        let sortMovieArry = movies.filter(movie => movie.genre.includes(event.target.value))
         console.log(sortMovieArry);
         setMovies(sortMovieArry)
     }
@@ -78,8 +78,9 @@ const MovieList = ({movies}) => {
         />
         <div className='movieList'>
         {movie.map((movie, index) =>
-        <div className ='movieCard' key={index}>
+        <div className ='movieCard' key={index} >
         <MovieCard
+        index={index}
         title={movie.title}
         year={movie.year}
         director={movie.director}

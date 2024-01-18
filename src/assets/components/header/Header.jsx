@@ -11,7 +11,6 @@ const Header = ({sortFunctionUp, sortFunctionDown, bestRate, sortAtoZ, sortZtoA,
         <button onClick={sortAtoZ}>A - Z</button>
         <button onClick={sortZtoA}>Z - A</button>
         <div>
-        <label for="genre">Genre:</label>
         <select onChange={showGenre}>
             <option value="Action">Action</option>
             <option value="Adventure">Adeventure</option>
