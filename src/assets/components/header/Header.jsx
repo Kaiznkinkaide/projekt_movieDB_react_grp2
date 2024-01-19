@@ -1,6 +1,6 @@
 
 import './header.css'
-const Header = ({sortFunctionUp, sortFunctionDown, bestRate, sortAtoZ, sortZtoA, showGenre}) => {
+const Header = ({search,serachFunction,sortFunctionUp, sortFunctionDown, bestRate, sortAtoZ, sortZtoA, showGenre}) => {
 
     return ( 
         <>
@@ -34,6 +34,13 @@ const Header = ({sortFunctionUp, sortFunctionDown, bestRate, sortAtoZ, sortZtoA,
             <option value="War">War</option>
             <option value="Western">Western</option>
         </select>
+        <div>
+            <input type="text"
+             placeholder='serach the title' 
+             value={search}
+             onInput={serachFunction}/>
+            
+        </div>
         </div>
         </header>
         </>

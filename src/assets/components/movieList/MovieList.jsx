@@ -7,6 +7,7 @@ import Header from "../header/Header";
 
 const MovieList = ({movies}) => {
     const[movie, setMovies]= useState(movies)
+    const[search, setSearch] =useState("")
     console.log(movies);
 
     const sortFunctionUp = () =>{
@@ -65,6 +66,16 @@ const MovieList = ({movies}) => {
         setMovies(sortMovieArry)
     }
 
+    const serachFunction = (event) => {
+        setSearch(event.target.value)
+        let sortMovieArry = movies.filter(movie => movie.title.toLowerCase().includes(event.target.value.toLowerCase()))
+
+        setMovies(sortMovieArry)
+        
+
+
+    }
+
     return ( 
         <>
         <Header
@@ -74,6 +85,8 @@ const MovieList = ({movies}) => {
         sortFunctionUp={sortFunctionUp}
         sortFunctionDown={sortFunctionDown}
         bestRate={bestRate}
+        serachFunction={serachFunction}
+        search={search}
         
         />
         <div className='movieList'>
